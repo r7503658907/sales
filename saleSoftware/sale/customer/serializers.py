@@ -103,3 +103,11 @@ class SaleOrderSerializer(serializers.Serializer):
 class UpdateSaleOrderStatus(serializers.Serializer):
     orderId = serializers.CharField(max_length=100)
     Status = serializers.CharField(max_length=100)
+
+
+class postProductSerializer(serializers.Serializer):
+    productId = serializers.CharField(max_length=100)
+    productName = serializers.CharField(max_length=100)
+    image = serializers.CharField(max_length=100)
+    price = serializers.JSONField()
+    halfprice = serializers.JSONField()
